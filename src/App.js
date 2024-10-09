@@ -8,17 +8,25 @@ import {
 } from "react-router-dom";
 import Login from "./Components/Login";
 import LandingPage from "./Components/LandingPage";
+import Dashboard from "./Components/Dashboard";
 import { ToastContainer } from "react-toastify";
+import "./App.css";
+import Analytics from "./Components/Analytics";
 
 function App() {
+  const isAuthenticated = !!localStorage.getItem("user");
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      <ToastContainer />
-    </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/dashboard"
+            element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
+          />
+          <Route path="/dashboard/analytics" element={<Analytics />}/>
+        </Routes>
+      </Router>
   );
 }
 
