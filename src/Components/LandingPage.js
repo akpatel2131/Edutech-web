@@ -7,23 +7,23 @@ const LandingPage = () => {
     <div>
       {/* Navigation Bar */}
       <nav className="bg-gray-800 p-4 text-white">
-        <div className="container mx-auto flex justify-between flex-wrap gap-2">
+        <div className="container mx-auto flex justify-between flex-wrap gap-2 items-center">
           <h1 className="text-2xl font-bold">EduTech+</h1>
-          <div>
+          <div className="flex items-center gap-2 flex-wrap">
             <Link to="/" className="mx-2">
               Home
             </Link>
-            <Link to="/about" className="mx-2">
+            <Link to="/page-not-found" className="mx-2">
               About
             </Link>
-            <Link to="/courses" className="mx-2">
+            <Link to="/page-not-found" className="mx-2">
               Courses
             </Link>
-            <Link to="/contact" className="mx-2">
+            <Link to="/page-not-found" className="mx-2">
               Contact
             </Link>
             <button
-              className="mt-4 bg-white text-blue-500 font-bold py-2 px-4 rounded"
+              className="bg-white text-blue-500 font-bold py-2 px-4 rounded"
               onClick={() => {
                 navigate("/login");
               }}

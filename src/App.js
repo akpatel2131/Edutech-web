@@ -12,6 +12,7 @@ import Dashboard from "./Components/Dashboard";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Analytics from "./Components/Analytics";
+import PageNotFound from "./Components/PageNotFound";
 
 function App() {
   const isAuthenticated = !!localStorage.getItem("user");
@@ -25,6 +26,7 @@ function App() {
             element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
           />
           <Route path="/dashboard/analytics" element={<Analytics />}/>
+          <Route path="/page-not-found" element={<PageNotFound />} />
         </Routes>
       </Router>
   );

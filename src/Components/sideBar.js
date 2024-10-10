@@ -8,7 +8,7 @@ export default function Sidebar() {
   const links = [
     { path: "/dashboard", label: "My Courses" },
     { path: "/dashboard/analytics", label: "Analytics" },
-    { path: "", label: "Account Settings" },
+    { path: "/page-not-found", label: "Account Settings" },
   ];
 
   return (
